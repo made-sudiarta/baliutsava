@@ -6,8 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ $invitation->title }} | BaliUtsava</title>
+
+    <meta name="description"
+          content="{{ \Illuminate\Support\Str::limit(trim(strip_tags(html_entity_decode($invitation->description ?? ''))), 160) }}">
+
+    <meta property="og:title"
+          content="{{ $invitation->title }} | BaliUtsava">
+
     <meta property="og:description"
-      content="{{ \Illuminate\Support\Str::limit(strip_tags($invitation->description), 160) }}">
+          content="{{ \Illuminate\Support\Str::limit(trim(strip_tags(html_entity_decode($invitation->description ?? ''))), 160) }}">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="{{ url()->current() }}">
 
     <meta name="theme-color" content="#f8f4ec">
 
