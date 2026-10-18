@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ $invitation->title }} | BaliUtsava</title>
-    <meta name="description"
-        content="{{ $invitation->description ?: $invitation->title }}">
+    <meta property="og:description"
+      content="{{ \Illuminate\Support\Str::limit(strip_tags($invitation->description), 160) }}">
 
     <meta name="theme-color" content="#f8f4ec">
 
