@@ -5,7 +5,7 @@ use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\InvitationMessageController;
 
 
-Route::redirect('/', '/admin/login');
+Route::redirect('/', '/admin/login'); //UPDATE
 Route::get('/undangan/{slug}', [
     InvitationController::class,
     'show',
