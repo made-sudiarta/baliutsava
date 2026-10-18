@@ -5,9 +5,7 @@ use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\InvitationMessageController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/admin/login');
 Route::get('/undangan/{slug}', [
     InvitationController::class,
     'show',
