@@ -10,27 +10,32 @@ class InvitationController extends Controller
 {
     public function show(Request $request, string $slug)
     {
+        
         $invitation = Invitation::query()
             ->where('slug', $slug)
             ->where('is_active', true)
             ->with([
-                'events' => function ($query) {
-                    $query->where('is_active', true)
-                        ->orderBy('sort_order')
-                        ->orderBy('starts_at');
-                },
-                'galleries' => function ($query) {
-                    $query->where('is_active', true)
-                        ->orderBy('sort_order');
-                },
+                'events' => fn ($query) => $query
+                    ->where('is_active', true)
+                    ->orderBy('sort_order')
+                    ->orderBy('starts_at'),
+
+                'galleries' => fn ($query) => $query
+                    ->where('is_active', true)
+                    ->orderBy('sort_order'),
+
+                'gifts' => fn ($query) => $query
+                    ->where('is_active', true)
+                    ->orderBy('sort_order'),
             ])
             ->firstOrFail();
+
 
         // Pagination ucapan dan doa
         $messages = $invitation->messages()
             ->where('moderation_status', 'approved')
             ->latest()
-            ->paginate(5)
+            ->paginate(3)
             ->withQueryString();
 
         // Tamu undangan berdasarkan token URL
@@ -51,7 +56,15 @@ class InvitationController extends Controller
             }
         }
 
-        return view('invitations.show', compact(
+        $availableThemes = [
+            'bali-elegant' => 'invitations.themes.bali-elegant',
+            'modern-minimalis' => 'invitations.themes.modern-minimalis',
+        ];
+
+        $themeView = $availableThemes[$invitation->theme]
+            ?? $availableThemes['bali-elegant'];
+
+        return view($themeView, compact(
             'invitation',
             'guest',
             'messages'
@@ -71,6 +84,9 @@ class InvitationController extends Controller
             ->where('moderation_status', 'approved')
             ->latest()
             ->paginate(5)
+            ->withPath(route('invitations.messages.index', [
+                'slug' => $invitation->slug,
+            ]))
             ->withQueryString();
 
         if ($request->ajax()) {

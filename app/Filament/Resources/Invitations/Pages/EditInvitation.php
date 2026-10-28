@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Invitations\Pages;
 
 use App\Filament\Resources\Invitations\InvitationResource;
+use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\RestoreAction;
@@ -16,10 +17,16 @@ class EditInvitation extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            ViewAction::make(),
-            DeleteAction::make(),
-            ForceDeleteAction::make(),
-            RestoreAction::make(),
+            Action::make('preview')
+                ->label('Preview Undangan')
+                ->icon('heroicon-o-eye')
+                ->color('gray')
+                ->url(fn () => route('invitations.preview', [
+                    'invitation' => $this->record->id,
+                ]))
+                ->openUrlInNewTab(),
+
+            // Pertahankan action lain yang sudah ada di sini.
         ];
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
+use App\Models\InvitationGift;
 
 class Invitation extends Model
 {
@@ -38,6 +39,9 @@ class Invitation extends Model
         'couple_photo',
         'partner_photo_1',
         'partner_photo_2',
+        'show_gifts',
+        'gift_title',
+        'gift_description',
     ];
 
     protected function casts(): array
@@ -77,5 +81,10 @@ class Invitation extends Model
     public function messages(): HasMany
     {
         return $this->hasMany(InvitationMessage::class);
+    }
+    public function gifts(): HasMany
+    {
+        return $this->hasMany(InvitationGift::class)
+            ->orderBy('sort_order');
     }
 }

@@ -1,0 +1,1446 @@
+
+:root {
+    --modern-ink: #303a35;
+    --modern-muted: #777f78;
+    --modern-green: #657b6b;
+    --modern-cream: #f7f6f1;
+    --modern-line: #e5e5dc;
+    --modern-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--modern-white);
+    color: var(--modern-ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.modern-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 32px 20px;
+    overflow: hidden;
+    background: var(--modern-cream);
+    text-align: center;
+}
+
+.modern-cover-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.modern-cover-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 620px);
+}
+
+.modern-eyebrow {
+    color: var(--modern-green);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.modern-cover h1,
+.modern-section h2,
+.modern-footer h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.modern-cover h1 {
+    margin: 24px 0;
+    font-size: clamp(38px, 8vw, 64px);
+}
+
+.modern-host {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(18px, 4vw, 25px);
+}
+
+.modern-host span {
+    display: block;
+    color: var(--modern-green);
+    font-style: italic;
+}
+
+.modern-date {
+    margin: 24px 0;
+    color: var(--modern-muted);
+}
+
+.modern-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 12px;
+    padding: 12px 24px;
+    border: 1px solid var(--modern-green);
+    border-radius: 4px;
+    background: var(--modern-green);
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modern-button:hover {
+    background: #526859;
+}
+
+.modern-section {
+    width: min(100% - 40px, 760px);
+    margin: 0 auto;
+    padding: 76px 0;
+    text-align: center;
+}
+
+.modern-section h2 {
+    margin: 8px 0 24px;
+    font-size: clamp(28px, 5vw, 40px);
+}
+
+.modern-description {
+    color: var(--modern-muted);
+}
+
+.modern-event-list {
+    display: grid;
+    gap: 16px;
+    text-align: left;
+}
+
+.modern-event {
+    padding: 22px;
+    border: 1px solid var(--modern-line);
+    border-radius: 8px;
+    background: var(--modern-white);
+}
+
+.modern-event h3 {
+    margin-top: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.modern-event p,
+.modern-location p {
+    color: var(--modern-muted);
+}
+
+.modern-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.modern-gallery figure {
+    margin: 0;
+}
+
+.modern-gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.modern-gallery figcaption {
+    padding-top: 8px;
+    color: var(--modern-muted);
+    font-size: 13px;
+}
+
+.modern-rsvp {
+    background: var(--modern-cream);
+}
+
+.modern-rsvp form,
+.modern-rsvp .message-list {
+    width: min(100%, 600px);
+    margin: 28px auto 0;
+    text-align: left;
+}
+
+.modern-rsvp label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.modern-rsvp input,
+.modern-rsvp textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--modern-line);
+    border-radius: 4px;
+    background: white;
+    color: var(--modern-ink);
+    font: inherit;
+}
+
+.modern-rsvp .rsvp-field {
+    margin-bottom: 18px;
+}
+
+.modern-rsvp .message-card {
+    margin-bottom: 12px;
+    padding: 18px;
+    border: 1px solid var(--modern-line);
+    border-radius: 6px;
+    background: white;
+}
+
+.modern-rsvp .message-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.modern-rsvp .message-time {
+    color: var(--modern-muted);
+    font-size: 12px;
+}
+
+.modern-rsvp .message-content {
+    overflow-wrap: anywhere;
+}
+
+.modern-rsvp .message-pagination {
+    margin-top: 24px;
+}
+
+.modern-rsvp .bali-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.modern-rsvp .bali-pagination a,
+.modern-rsvp .bali-pagination span {
+    display: inline-flex;
+    min-width: 36px;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border: 1px solid var(--modern-line);
+    border-radius: 4px;
+    color: var(--modern-ink);
+    text-decoration: none;
+}
+
+.modern-rsvp .bali-pagination .active {
+    border-color: var(--modern-green);
+    background: var(--modern-green);
+    color: white;
+}
+
+.modern-footer {
+    padding: 56px 20px;
+    background: var(--modern-cream);
+    text-align: center;
+}
+
+.modern-footer h2 {
+    color: var(--modern-green);
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .modern-section {
+        width: min(100% - 32px, 760px);
+        padding: 56px 0;
+    }
+
+    .modern-gallery {
+        gap: 8px;
+    }
+
+    .modern-rsvp .message-header {
+        flex-direction: column;
+    }
+}
+.modern-music-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--modern-green);
+    border-radius: 50%;
+
+    background: var(--modern-green);
+    color: #fff;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.modern-music-toggle:hover {
+    background: #526859;
+    transform: scale(1.06);
+}
+
+.modern-music-toggle.playing {
+    animation: modern-music-spin 4s linear infinite;
+}
+
+@keyframes modern-music-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .modern-music-toggle {
+        right: 16px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.modern-location {
+    text-align: center;
+}
+
+.modern-location-address {
+    max-width: 600px;
+    margin: 12px auto 24px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.modern-map-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 24px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(41, 70, 56, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    background: #f5f5f5;
+}
+
+.modern-map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.modern-map-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .modern-map-wrapper iframe {
+        height: 250px;
+    }
+}
+
+.modern-countdown-section {
+    text-align: center;
+}
+
+.modern-countdown-intro {
+    max-width: 500px;
+    margin: 12px auto 28px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.modern-countdown {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 28px auto;
+}
+
+.modern-countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    min-height: 95px;
+    padding: 12px 8px;
+    border: 1px solid #c8a45d;
+    border-radius: 12px;
+    background: #fffdf8;
+    box-shadow: 0 5px 16px rgba(41, 70, 56, 0.06);
+}
+
+.modern-countdown-item span {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #294638;
+    font-variant-numeric: tabular-nums;
+}
+
+.modern-countdown-item small {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8b7548;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modern-countdown-date {
+    color: #294638;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.modern-countdown-message {
+    margin-top: 16px;
+    color: #8b7548;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .modern-countdown {
+        gap: 8px;
+    }
+
+    .modern-countdown-item {
+        width: calc(25% - 8px);
+        min-width: 65px;
+        min-height: 78px;
+        padding: 8px 4px;
+    }
+
+    .modern-countdown-item span {
+        font-size: 25px;
+    }
+
+    .modern-countdown-item small {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.modern-couple {
+    max-width: 760px;
+    margin: 38px auto 0;
+    padding: 28px 20px;
+    border-top: 1px solid rgba(200, 164, 93, 0.45);
+}
+
+.modern-couple-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.modern-couple-divider span:not(.modern-couple-heart) {
+    width: 65px;
+    height: 1px;
+    background: #c8a45d;
+}
+
+.modern-couple-heart {
+    color: #c8a45d;
+    font-size: 18px;
+}
+
+.modern-couple-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.modern-couple-person {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.modern-couple-label {
+    margin-bottom: 10px;
+    color: #a58a50;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.modern-couple-person h3 {
+    margin: 0;
+    color: #294638;
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.modern-couple-ampersand {
+    color: #c8a45d;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-style: italic;
+}
+
+.modern-couple-caption {
+    max-width: 460px;
+    margin: 28px auto 0;
+    color: #777;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+    .modern-couple {
+        padding: 24px 8px;
+    }
+
+    .modern-couple-info {
+        gap: 12px;
+    }
+
+    .modern-couple-person h3 {
+        font-size: 22px;
+    }
+
+    .modern-couple-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .modern-couple-ampersand {
+        font-size: 28px;
+    }
+}
+
+/* Foto bersama */
+.modern-couple-shared-photo {
+    width: min(100%, 340px);
+    margin: 0 auto 28px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    outline: 1px solid rgba(200, 164, 93, 0.7);
+    border-radius: 160px 160px 16px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.modern-couple-shared-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+/* Foto Bride dan Groom terpisah */
+.modern-couple-photo {
+    width: min(100%, 240px);
+    margin: 0 auto 18px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    outline: 1px solid rgba(200, 164, 93, 0.7);
+    border-radius: 120px 120px 12px 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.modern-couple-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+@media (max-width: 480px) {
+    .modern-couple-photo {
+        width: 100%;
+    }
+
+    .modern-couple-shared-photo {
+        width: min(100%, 280px);
+    }
+
+    .modern-couple-info {
+        gap: 10px;
+    }
+}
+
+
+.modern-invitation-logo {
+    width: 100%;
+    max-width: 420px;
+    margin: 16px auto 24px;
+    text-align: center;
+}
+
+.modern-invitation-logo img {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .modern-invitation-logo {
+        max-width: 320px;
+    }
+
+    .modern-invitation-logo img {
+        max-height: 180px;
+    }
+}
+
+/* ===== Modern RSVP / Ucapan & Doa ===== */
+.modern-rsvp {
+    background: linear-gradient(180deg, #faf9f5 0%, #f3f2eb 100%);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.rsvp-heading {
+    max-width: 580px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.rsvp-heading-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(200, 164, 93, 0.55);
+    border-radius: 50%;
+    color: #b59650;
+    font-size: 22px;
+}
+
+.rsvp-heading h2 {
+    margin: 8px 0 12px;
+    color: #294638;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 400;
+}
+
+.rsvp-subtitle {
+    max-width: 460px;
+    margin: 0 auto;
+    color: #777b73;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.rsvp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: start;
+    gap: 26px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.rsvp-form-card,
+.rsvp-messages-card {
+    min-width: 0;
+    padding: 30px;
+    border: 1px solid rgba(41, 70, 56, 0.09);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 12px 36px rgba(41, 70, 56, 0.055);
+}
+
+.rsvp-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 26px;
+}
+
+.rsvp-card-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: #edf1e9;
+    color: #294638;
+    font-size: 24px;
+}
+
+.rsvp-card-heading h3 {
+    margin: 0 0 5px;
+    color: #294638;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.rsvp-card-heading p {
+    margin: 0;
+    color: #888b83;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.rsvp-field {
+    margin-bottom: 22px;
+}
+
+.rsvp-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #34493b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rsvp-field input,
+.rsvp-field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e4e5dc;
+    border-radius: 12px;
+    outline: none;
+    background: #fbfbf8;
+    color: #344238;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.rsvp-field input {
+    min-height: 50px;
+}
+
+.rsvp-field textarea {
+    min-height: 135px;
+    resize: vertical;
+    line-height: 1.8;
+}
+
+.rsvp-field input:focus,
+.rsvp-field textarea:focus {
+    border-color: #8b9b80;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(139, 155, 128, 0.13);
+}
+
+.rsvp-field input[readonly] {
+    background: #f1f2ed;
+    color: #777b73;
+}
+
+.rsvp-field input::placeholder,
+.rsvp-field textarea::placeholder {
+    color: #a5a79f;
+}
+
+.rsvp-field-note {
+    margin-top: 8px;
+    color: #92958c;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.rsvp-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 12px;
+    background: #294638;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.rsvp-submit:hover {
+    background: #3b5b48;
+    transform: translateY(-1px);
+}
+
+.rsvp-submit span:last-child {
+    color: #e0c47e;
+    font-size: 20px;
+}
+
+.rsvp-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 1080px;
+    margin: 0 auto 24px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.rsvp-alert-success {
+    border: 1px solid #d4e3d2;
+    background: #f0f7ee;
+    color: #315b37;
+}
+
+.rsvp-alert-error {
+    border: 1px solid #efd5d0;
+    background: #fff5f3;
+    color: #8b3830;
+}
+
+.rsvp-alert ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+}
+
+.rsvp-alert-icon {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Daftar ucapan di dalam kartu */
+.rsvp-messages-card #message-section {
+    min-width: 0;
+}
+
+.rsvp-messages-card .message-card {
+    margin-bottom: 12px;
+    padding: 17px;
+    border: 1px solid #eeeee7;
+    border-radius: 14px;
+    background: #fdfdfa;
+    box-shadow: none;
+}
+
+.rsvp-messages-card .message-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 22px;
+}
+
+@media (max-width: 760px) {
+    .modern-rsvp {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .rsvp-heading {
+        margin-bottom: 30px;
+    }
+
+    .rsvp-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .rsvp-form-card,
+    .rsvp-messages-card {
+        padding: 22px 18px;
+        border-radius: 17px;
+    }
+}
+
+@media (max-width: 380px) {
+    .rsvp-form-card,
+    .rsvp-messages-card {
+        padding: 18px 14px;
+    }
+
+    .rsvp-card-heading h3 {
+        font-size: 19px;
+    }
+}
+
+/* ===== Responsive Ucapan & Doa ===== */
+
+.modern-rsvp {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: clamp(40px, 6vw, 80px) clamp(16px, 4vw, 40px);
+}
+
+.modern-rsvp *,
+.modern-rsvp *::before,
+.modern-rsvp *::after {
+    box-sizing: border-box;
+}
+
+.rsvp-heading {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto 36px;
+}
+
+.rsvp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(16px, 2.5vw, 28px);
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.rsvp-form-card,
+.rsvp-messages-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: clamp(18px, 2.5vw, 30px);
+    overflow-wrap: anywhere;
+}
+
+.rsvp-form-card form {
+    width: 100%;
+    min-width: 0;
+}
+
+.rsvp-field {
+    width: 100%;
+    min-width: 0;
+}
+
+.rsvp-field input,
+.rsvp-field textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.rsvp-submit {
+    width: 100%;
+    max-width: 100%;
+}
+
+.rsvp-messages-card #message-section {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.rsvp-messages-card #message-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet dan HP */
+@media (max-width: 760px) {
+    .modern-rsvp {
+        padding: 48px 18px;
+    }
+
+    .rsvp-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        max-width: 560px;
+    }
+
+    .rsvp-form-card,
+    .rsvp-messages-card {
+        width: 100%;
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .rsvp-card-heading {
+        gap: 12px;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 400px) {
+    .modern-rsvp {
+        padding: 40px 12px;
+    }
+
+    .rsvp-form-card,
+    .rsvp-messages-card {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .rsvp-card-heading h3 {
+        font-size: 18px;
+    }
+
+    .rsvp-card-heading p {
+        font-size: 11px;
+    }
+
+    .rsvp-field input,
+    .rsvp-field textarea {
+        font-size: 14px;
+    }
+}
+
+/* Ucapan & Doa — laptop kecil */
+@media (min-width: 761px) and (max-width: 1366px) {
+    .rsvp-messages-card {
+        padding: 18px !important;
+    }
+
+    .rsvp-messages-heading {
+        gap: 9px;
+        margin-bottom: 18px;
+    }
+
+    .rsvp-messages-heading .rsvp-card-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .rsvp-messages-heading h3 {
+        font-size: 16px !important;
+    }
+
+    .rsvp-messages-heading p {
+        font-size: 10px !important;
+    }
+
+    .rsvp-messages-card #message-section,
+    .rsvp-messages-card #message-section * {
+        font-size: 10px !important;
+        line-height: 1.45 !important;
+    }
+
+    .rsvp-messages-card #message-section .message-card {
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+        border-radius: 10px;
+    }
+
+    .rsvp-messages-card #message-section strong {
+        font-size: 11px !important;
+    }
+
+    .rsvp-messages-card #message-section p {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    .rsvp-messages-card #message-section time,
+    .rsvp-messages-card #message-section small {
+        font-size: 9px !important;
+    }
+
+    .rsvp-messages-card #message-section .message-pagination {
+        gap: 4px;
+        margin-top: 12px;
+    }
+
+    .rsvp-messages-card #message-section .message-pagination a,
+    .rsvp-messages-card #message-section .message-pagination span {
+        padding: 4px 7px !important;
+    }
+}
+
+/* ===== Simple Modern Footer ===== */
+.modern-footer {
+    padding: 32px 20px 20px;
+    text-align: center;
+    background: #294638;
+    color: #fff;
+}
+
+.modern-footer-thanks {
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.modern-footer h2 {
+    margin: 0;
+    color: #e1c47c;
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.modern-footer-divider {
+    display: none;
+}
+
+.modern-footer-brand {
+    margin: 24px 0 5px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    letter-spacing: 0.3px;
+}
+
+.footer-heart {
+    color: #e1c47c;
+}
+
+.modern-footer-logo {
+    display: inline-block;
+    margin: 0 0 12px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+}
+
+.modern-footer-logo span {
+    color: #e1c47c;
+}
+
+.modern-footer-logo:hover {
+    opacity: 0.8;
+}
+
+.modern-footer-copyright {
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+}
+
+@media (max-width: 480px) {
+    .modern-footer {
+        padding: 28px 16px 18px;
+    }
+
+    .modern-footer-thanks {
+        font-size: 12px;
+    }
+
+    .modern-footer h2 {
+        font-size: 25px;
+    }
+
+    .modern-footer-brand {
+        margin-top: 20px;
+    }
+}
+
+/* Kunci halaman sebelum undangan dibuka */
+html.invitation-locked,
+html.invitation-locked body {
+    overflow: hidden !important;
+    height: 100%;
+}
+
+html.invitation-locked body {
+    position: fixed;
+    width: 100%;
+    inset: 0;
+}
+
+html.invitation-locked #coverUndangan {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Konten undangan disembunyikan sebelum dibuka */
+html.invitation-locked body > *:not(script):not(style) {
+    visibility: hidden;
+}
+
+html.invitation-locked #coverUndangan,
+html.invitation-locked #coverUndangan * {
+    visibility: visible;
+}
+
+/* Cover tetap di atas setelah undangan dibuka */
+html.invitation-opened #coverUndangan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Isi undangan dimulai setelah cover */
+html.invitation-opened #isiUndangan {
+    position: relative;
+    z-index: 1;
+    margin-top: 100vh;
+    margin-top: 100dvh;
+}
+
+/* Cover undangan sebelum dibuka */
+#coverUndangan {
+    position: relative;
+    z-index: 10;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        visibility 0.8s ease;
+}
+
+/* Animasi cover menghilang */
+#coverUndangan.cover-closing {
+    opacity: 0;
+    transform: translateY(-35px);
+    pointer-events: none;
+}
+
+/* Cover dihapus dari tampilan setelah animasi */
+#coverUndangan.cover-hidden {
+    display: none !important;
+}
+
+/* Isi undangan tidak diberi jarak tambahan setelah cover hilang */
+html.invitation-opened #isiUndangan {
+    margin-top: 0 !important;
+}
+
+/* ===== Scroll Reveal Animation ===== */
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi foto dan card */
+.reveal-on-scroll .modern-couple-photo,
+.reveal-on-scroll .modern-couple-shared-photo,
+.reveal-on-scroll .modern-gallery figure,
+.reveal-on-scroll .modern-countdown-item {
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible .modern-gallery figure:hover,
+.reveal-on-scroll.is-visible .modern-countdown-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Hormati pengaturan pengurangan animasi pengguna */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll,
+    .reveal-on-scroll .modern-couple-photo,
+    .reveal-on-scroll .modern-couple-shared-photo,
+    .reveal-on-scroll .modern-gallery figure,
+    .reveal-on-scroll .modern-countdown-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+}
+
+.modern-gifts {
+    text-align: center;
+    background: #23221f;
+    color: #f4f0e8;
+}
+
+.modern-gifts h2 {
+    color: #d8bd80;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 400;
+}
+
+.modern-gift-description {
+    max-width: 560px;
+    margin: 18px auto 36px;
+    color: #ddd8ce;
+    line-height: 1.8;
+}
+
+.modern-gift-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+    gap: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.modern-gift-card {
+    padding: 28px 20px;
+    border: 1px solid rgba(216, 189, 128, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.modern-gift-bank-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 82px;
+    margin: 0 auto 20px;
+    padding: 12px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.modern-gift-bank-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modern-gift-card h3 {
+    margin: 0 0 24px;
+    color: #d8bd80;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.modern-gift-label {
+    margin-bottom: 8px;
+    color: #bdb8ae;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.modern-gift-number {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.modern-gift-holder {
+    margin: 12px 0 24px;
+    color: #e9e4da;
+    font-size: 16px;
+}
+
+.modern-gift-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modern-gift-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 1px solid #e7dfcf;
+    border-radius: 999px;
+    background: transparent;
+    color: #f4f0e8;
+    font: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modern-gift-button:hover {
+    background: #e7dfcf;
+    color: #23221f;
+}
+
+.modern-gift-feedback {
+    min-height: 20px;
+    margin-top: 16px;
+    color: #d8bd80;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .modern-gift-card {
+        padding: 24px 16px;
+    }
+
+    .modern-gift-number {
+        font-size: 21px;
+    }
+}
