@@ -59,6 +59,7 @@ class InvitationController extends Controller
         $availableThemes = [
             'bali-elegant' => 'invitations.themes.bali-elegant',
             'modern-minimalis' => 'invitations.themes.modern-minimalis',
+            'superior-modern' => 'invitations.themes.superior-modern',
         ];
 
         $themeView = $availableThemes[$invitation->theme]

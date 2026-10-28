@@ -170,6 +170,7 @@ class InvitationForm
                         ->options([
                             'bali-elegant' => 'Bali Elegant',
                             'modern-minimalis' => 'Modern Minimalis',
+                            'superior-modern' => 'Superior Modern',
                         ])
                         ->default('bali-elegant')
                         ->required()

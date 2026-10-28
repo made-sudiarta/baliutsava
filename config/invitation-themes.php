@@ -15,4 +15,10 @@ return [
         'thumbnail' => 'images/themes/modern-minimalis.jpg',
         'view' => 'invitations.themes.modern-minimalis',
     ],
+    'superior-modern' => [
+        'label' => 'Superior Modern',
+        'description' => 'Split-screen modern dengan splash screen elegan.',
+        'thumbnail' => 'images/themes/superior-modern.jpg',
+        'view' => 'invitations.themes.superior-modern',
+    ],
 ];
